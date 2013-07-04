@@ -15,6 +15,6 @@ paxby.combinatorics.metaheuristics provides the following metaheuristics:
 * MAX-MIN Ant System (MMAS)
 
 paxby.combinatorics.metaheuristics.exp provides two implementations:
-* RunWithGUI - a GUI for visual (Concorde-like).
+* RunWithGUI - a GUI for a visual presentation (Concorde-like).
 * RunComparison - for comparing the performance of metaheuristics and their parameters
 
