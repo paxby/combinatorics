@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="test" class="java.util.ArrayList">
+		<constructor-arg>
+			<list value-type="java.lang.String">
+				<idref bean="as"></idref>
+				<idref bean="mmas"></idref>
+				<idref bean="mmas-qnn"></idref>
+			</list>
+		</constructor-arg>
+	</bean>
+
+	<bean id="as" class="paxby.combinatorics.metaheuristics.AS" scope="prototype">
+		<constructor-arg name="tsp" ref="tsp" />
+		<constructor-arg name="config" ref="config-nn" />
+	</bean>
+
+	<bean id="mmas" class="paxby.combinatorics.metaheuristics.MMAS" scope="prototype" parent="as">
+	</bean>
+
+	<bean id="mmas-qnn" class="paxby.combinatorics.metaheuristics.MMAS" scope="prototype" parent="mmas">
+		<constructor-arg name="config" ref="config-qnn" />
+	</bean>
+
+	<bean id="tsp" class="paxby.combinatorics.tsp.TSP">
+		<constructor-arg name="fileName" value="resources/random100.tsp" />
+	</bean>
+
+	<bean id="config-nn" class="paxby.combinatorics.metaheuristics.ASConfig">
+		<property name="alpha" value="1" />
+		<property name="beta" value="2" />
+		<property name="m" value="25" />
+		<property name="mFactor" value="1.0" />
+		<property name="rho" value="0.2" />
+		<property name="constructStrategy" ref="nn" />
+		<property name="localStrategy" ref="nn" />
+		<property name="constructNeighbours" value="20" />
+		<property name="localNeighbours" value="25" />
+	</bean>
+
+	<bean id="config-qnn" class="paxby.combinatorics.metaheuristics.ASConfig"
+		parent="config-nn">
+		<property name="localStrategy" ref="qnn" />
+	</bean>
+
+	<bean id="nn" class="paxby.combinatorics.tsp.NearestNeighbourStrategy" />
+	<bean id="qnn" class="paxby.combinatorics.tsp.QNearestNeighbourStrategy" />
+
+</beans>
