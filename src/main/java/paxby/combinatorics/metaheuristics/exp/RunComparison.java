@@ -3,7 +3,7 @@ package paxby.combinatorics.metaheuristics.exp;
 import java.util.List;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 import paxby.combinatorics.metaheuristics.*;
 
@@ -18,7 +18,7 @@ public class RunComparison {
 	private static final int TESTS = 50;
 	private static final int ITERATIONS = 100;
 
-	ApplicationContext context = new ClassPathXmlApplicationContext("test1.xml");
+	ApplicationContext context = new FileSystemXmlApplicationContext("run.xml");
 
 	private int[] Test(String bean, int tests, int iterations) {
 

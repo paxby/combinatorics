@@ -26,7 +26,7 @@
 	</bean>
 
 	<bean id="tsp" class="paxby.combinatorics.tsp.TSP">
-		<constructor-arg name="fileName" value="resources/random100.tsp" />
+		<constructor-arg name="fileName" value="tsplibx/random100.tsp" />
 	</bean>
 
 	<bean id="config-nn" class="paxby.combinatorics.metaheuristics.ASConfig">

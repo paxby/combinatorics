@@ -16,7 +16,7 @@ import org.junit.rules.ExpectedException;
 
 public class TSPTest {
 
-	private static final String tspLib = "resources/tsplib/";
+	private static final String tspLib = "tsplibx/";
 	
 	Node n0, n1, n2;
 	List<Node> nodes;

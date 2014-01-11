@@ -11,7 +11,7 @@
 	</bean>
 	
 	<bean id="tsp" class="paxby.combinatorics.tsp.TSP">
-		<constructor-arg name="fileName" value="resources/clusters.tsp" />
+		<constructor-arg name="fileName" value="tsplibx/clusters300.tsp" />
 	</bean>
 
 	<bean id="ASConfig" class="paxby.combinatorics.metaheuristics.ASConfig">
