@@ -1,7 +1,6 @@
 package paxby.combinatorics.metaheuristics;
 
 import paxby.combinatorics.tsp.NearestNeighbourStrategy;
-import paxby.combinatorics.tsp.QNearestNeighbourStrategy;
 import paxby.combinatorics.tsp.NeighbourStrategy;
 
 public class ASConfig {
@@ -9,9 +8,8 @@ public class ASConfig {
 	private int alpha = 1;
 	private int beta = 2;
 	private int m = 25;
-	private double mFactor = 1.0; 
 	private double rho = 0.2;
-	private NeighbourStrategy constructStrategy = new QNearestNeighbourStrategy();
+	private NeighbourStrategy constructStrategy = new NearestNeighbourStrategy();
 	private NeighbourStrategy localStrategy = new NearestNeighbourStrategy();
 	private int constructNeighbours = 20;
 	private int localNeighbours = 25;
@@ -33,12 +31,6 @@ public class ASConfig {
 	}
 	public void setM(int m) {
 		this.m = m;
-	}
-	public double getmFactor() {
-		return mFactor;
-	}
-	public void setmFactor(double mFactor) {
-		this.mFactor = mFactor;
 	}
 	public double getRho() {
 		return rho;

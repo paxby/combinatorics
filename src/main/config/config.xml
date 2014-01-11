@@ -11,14 +11,13 @@
 	</bean>
 	
 	<bean id="tsp" class="paxby.combinatorics.tsp.TSP">
-		<constructor-arg name="fileName" value="resources/random100.tsp" />
+		<constructor-arg name="fileName" value="resources/clusters.tsp" />
 	</bean>
 
 	<bean id="ASConfig" class="paxby.combinatorics.metaheuristics.ASConfig">
 		<property name="alpha" value="1" />
 		<property name="beta" value="2" />
 		<property name="m" value="25" />
-		<property name="mFactor" value="1.0" />
 		<property name="rho" value="0.2" />
 		<property name="constructStrategy" ref="qnn" />
 		<property name="localStrategy" ref="nn" />

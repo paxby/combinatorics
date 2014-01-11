@@ -33,7 +33,6 @@
 		<property name="alpha" value="1" />
 		<property name="beta" value="2" />
 		<property name="m" value="25" />
-		<property name="mFactor" value="1.0" />
 		<property name="rho" value="0.2" />
 		<property name="constructStrategy" ref="nn" />
 		<property name="localStrategy" ref="nn" />
