@@ -49,10 +49,6 @@ public class RunComparison {
 		}
 	}
 
-	public static void main(String args[]) {
-		new RunComparison().testAll();
-	}
-
 	public static double mean(int[] arr) {
 		double a = 0;
 		for (int i = 0; i < arr.length; i++) {
@@ -72,5 +68,9 @@ public class RunComparison {
 
 	public static double sd(int[] arr) {
 		return Math.sqrt(var(arr));
+	}
+
+	public static void main(String args[]) {
+		new RunComparison().testAll();
 	}
 }
